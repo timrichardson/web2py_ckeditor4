@@ -1,8 +1,8 @@
 CKEDITOR.editorConfig = function( config ) {
   config.toolbarGroups = [
+    { name: 'styles', groups: [ 'styles' ] },
     { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
     { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-    { name: 'styles', groups: [ 'styles' ] },
     { name: 'insert', groups: [ 'insert' ] },
     '/',
     { name: 'links', groups: [ 'links' ] },

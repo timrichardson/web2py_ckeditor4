@@ -1,21 +1,10 @@
+/**
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
 CKEDITOR.editorConfig = function( config ) {
-  config.toolbarGroups = [
-    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-    { name: 'styles', groups: [ 'styles' ] },
-    { name: 'insert', groups: [ 'insert' ] },
-    '/',
-    { name: 'links', groups: [ 'links' ] },
-    { name: 'forms', groups: [ 'forms' ] },
-    { name: 'tools', groups: [ 'tools' ] },
-    { name: 'others', groups: [ 'others' ] },
-    { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-    { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
-    { name: 'colors', groups: [ 'colors' ] },
-    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
-    { name: 'about', groups: [ 'about' ] }
-  ];
-
-  config.removeButtons = 'Subscript,Superscript,Cut,Anchor,Maximize,Strike,RemoveFormat,About,Scayt,Styles';
-
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+	// config.uiColor = '#AADC6E';
 };
