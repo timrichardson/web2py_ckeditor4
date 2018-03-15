@@ -1,5 +1,7 @@
-web2py_ckeditor (2014 fork, v1.0)
+web2py_ckeditor
 ===============
+
+v1.3 Updated in progress March 2018
 
 v1.2 Updated to ckeditor 4.5.7 Feb 2016.
 
