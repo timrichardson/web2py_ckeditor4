@@ -51,7 +51,7 @@ class CKEditor(object):
         """
         upload_name = self.settings.table_upload_name
 
-        self.settings.table_upload = self.db.define_table(upload_name,
+        self.db.define_table(upload_name,
             Field('title', length=255),
             Field('filename', length=255),
             Field('flength', 'integer'),
@@ -62,6 +62,7 @@ class CKEditor(object):
             fake_migrate = fake_migrate,
             format = '%(title)s'
         )
+        self.settings.table_upload = self.db[upload_name]
 
 
     def widget(self, field, value, **attributes):
