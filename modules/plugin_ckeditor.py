@@ -147,6 +147,7 @@ class CKEditor(object):
         upload_url = self.settings.url_upload
         browse_url = self.settings.url_browse
         ckeditor_js = URL('static', 'plugin_ckeditor/ckeditor.js')
+        ckeditor_config = URL('static', 'ckeditor_config.js')
         jquery_js = URL('static', 'plugin_ckeditor/adapters/jquery.js')
 
         contents_css = "['%s']" % URL('static', 'plugin_ckeditor/contents.css')
@@ -173,21 +174,10 @@ class CKEditor(object):
             <script type="text/javascript">
                 function ckeditor_config() {
                     return {
+                        customConfig: '%(ckeditor_config)s',
                         contentsCss: %(contents_css)s,
                         filebrowserUploadUrl: '%(upload_url)s',
                         filebrowserBrowseUrl: '%(browse_url)s',
-                        /*
-                        toolbar: [
-                            {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
-                            {name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt']},
-                            {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
-                            {name: 'insert', items: ['Image', 'Flash', 'Table', 'SpecialChar']},
-                            {name: 'tools', items: ['Maximize', 'ShowBlocks', '-', 'Source']},
-                            '/',
-                            {name: 'styles', items: ['Format', 'Font', 'FontSize']},
-                            {name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat']},
-                            {name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
-                        ],*/
                         scayt_autoStartup: %(scayt)s,
                     }
                 }
@@ -195,6 +185,7 @@ class CKEditor(object):
             </script>
             """ % dict(
                 ckeditor_js = ckeditor_js,
+                ckeditor_config = ckeditor_config,
                 jquery_js = jquery_js,
 
                 contents_css = contents_css,

@@ -1,5 +1,8 @@
 web2py_ckeditor
 ===============
+V1.2.1  Permit lazy_tables = True
+	Updated ckeditor to 4.8 March 2018
+	Add ckeditor configuration file to simplify javascript in python module       
 
 v1.3 Updated in progress March 2018
 
@@ -76,6 +79,12 @@ To solve: ...use the following code in your model before ckeditor.define_tables(
     ckeditor.settings.url_upload = URL(request.app, 'plugin_ckeditor', 'upload', extension='html')
     ckeditor.settings.url_browse = URL(request.app, 'plugin_ckeditor', 'browse', extension='html')
 
+##### Tips for V1.2.1 (From Jonathan Clark)
+
+- The plugin uses the standard web2py download function found in `controllers/default.py`   for displaying images. Don't do what I did and delete it.
+- ckeditor provides a toolbar configuration tool in 
+  `static/plugin_ckeditor/samples` which you can use to create a config.js file. You   can adjust which config file is loaded via the customConfig parameter in the load  function in `modules/plugin_ckeditor.py`. There is a sample one called `ckeditor_config.js` in the static folder.
+
 
 =======
 v 0.4 Updated to ckeditor 4.4.3 July 15 2014
@@ -150,3 +159,4 @@ Leonel Câmara: 	"You use the XML helper. For instance, let's suppose I have a t
 {{=XML(page.body, sanitize=False)}}
 
 If you can trust the input "sanitize=False" is a good idea (for instance if it can only be changed in the backoffice by members of the administration), otherwise remove the sanitize=False."
+
